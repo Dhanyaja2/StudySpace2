@@ -4,7 +4,8 @@ import { createContext, useEffect, useState } from "react";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-  const url = "http://localhost:5000";
+  // const url = "http://localhost:5000";
+  const url = 'studyspace2-production.up.railway.app';
   const token = localStorage.getItem("token");
   const [isLoading, setIsLoading] = useState(false);
   const [open, setOpen] = useState(false);
