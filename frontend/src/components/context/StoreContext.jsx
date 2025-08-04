@@ -97,7 +97,6 @@ const StoreContextProvider = (props) => {
     fetchDecks,
     cardsCountFunc,
     dueCardsFunc,
-    cardsCount,
   };
 
   return (
