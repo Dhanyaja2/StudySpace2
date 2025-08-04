@@ -257,7 +257,7 @@ const Decks = () => {
                 /{DESCRIPTION_WORD_LIMIT}
               </p>
             </div>
-            <Button onClick={handleCreateDeck} variant="animate">
+            <Button onClick={handleCreateDeck()} variant="animate">
               <Plus className="h-4 w-4" />
               Create
             </Button>
