@@ -6,7 +6,8 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   // const url = "http://localhost:5000";
   // const url = 'studyspace2-production.up.railway.app';
-  const url = 'https://studyspace2-production.up.railway.app';
+  // const url = 'https://studyspace2-production.up.railway.app';
+  const url = 'https://studyspace2-5tuc.onrender.com';
   const token = localStorage.getItem("token");
   const [isLoading, setIsLoading] = useState(false);
   const [open, setOpen] = useState(false);
