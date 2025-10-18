@@ -234,7 +234,7 @@ const Decks = () => {
                 onChange={(e) =>
                   setNewDeckData({ ...newDeckData, deckName: e.target.value })
                 }
-                onKeyDown={(e) => e.key === "Enter" && handleCreateDeck()}
+                onKeyDown={(e) => e.key === "Enter" && handleCreateDeck}
               />
               <Input
                 placeholder="Enter Deck Description(optional)"
@@ -245,7 +245,7 @@ const Decks = () => {
                   const wordCount = input.trim().split(/\s+/).length;
                   setNewDeckData({ ...newDeckData, deckDescription: input });
                 }}
-                onKeyDown={(e) => e.key === "Enter" && handleCreateDeck()}
+                onKeyDown={(e) => e.key === "Enter" && handleCreateDeck}
               />
               <p className="text-xs text-gray-500 mt-1">
                 {
