@@ -10,6 +10,8 @@ const deckSchema = new mongoose.Schema({
     timestamps: true,
 })
 
+deckSchema.index({userId: 1, deckName: 1}, {unique: true});
+
 const deckModel = mongoose.models.deck || mongoose.model("deck", deckSchema);
 
 export default deckModel;
