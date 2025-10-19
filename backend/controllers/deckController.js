@@ -34,11 +34,11 @@ export const addDeck = async (req, res) => {
       .status(400)
       .json({ success: false, message: "Deck name and user ID are required" });
   }
-  const exists = await deckModel.findOne({ deckName });
+  const exists = await deckModel.findOne({ deckName, userId });
   if (exists) {
     return res.json({
       success: false,
-      message: `Deck with ${deckName} name already exists.`,
+      message: `You already have deck named "${deckName}".`,
     });
   }
   try {
