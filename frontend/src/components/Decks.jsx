@@ -26,6 +26,7 @@ const Decks = () => {
 
   const handleCreateDeck = async () => {
     if (!newDeckData.deckName.trim()) {
+      alert("Please enter a deck name.")
       return;
     }
     const newUrl = `${url}/api/deck/addDeck`;
@@ -34,10 +35,19 @@ const Decks = () => {
         headers: { token },
       });
       console.log(response.data.message);
+      alert(response.data.message);
+      if(response.data.success){  
       setNewDeckData({ ...newDeckData, deckName: "", deckDescription: "" });
       await fetchDecks();
+      }
     } catch (error) {
       console.log(error);
+      if(error.response){
+        alert(error.response.data.message || "Failed to create deck");
+      } else {
+        alert("Server not responding. Try again later.")
+      }
+      
     }
   };
 
