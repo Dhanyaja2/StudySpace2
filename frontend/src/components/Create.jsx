@@ -37,7 +37,7 @@ const Create = () => {
     try {
       const res = await axios.post(newUrl, newCardData, { headers: { token } });
       console.log("card added");
-      setNewCardData({ question: "", answe: "", deckId: "" });
+      setNewCardData({ question: "", answer: "", deckId: "" });
       setSelectedDeck("");
       await cardsCountFunc();
     } catch (error) {
