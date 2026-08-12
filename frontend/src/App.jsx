@@ -16,7 +16,7 @@ const App = () => {
   if(!isAppReady) return null;
 
   return (
-    <div className=" w-screen min-h-screen">
+    <div className="min-h-screen">
       <BrowserRouter>
         <Routes>
           {/* public routes */}
